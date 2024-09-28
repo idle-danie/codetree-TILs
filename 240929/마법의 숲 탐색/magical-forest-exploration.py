@@ -24,10 +24,7 @@ def resetMap():
 # 북쪽에서 남쪽으로 내려와야하므로 중심이 (y, x)에 위치할때의 범위와 (y-1, x)에 위치할떄의 범위 모두 확인합니다
 def canGo(y, x):
     flag = 0 <= x - 1 and x + 1 < C and y + 1 < R + 3
-    flag = flag and (A[y - 1][x - 1] == 0)
-    flag = flag and (A[y - 1][x + 1] == 0)
     flag = flag and (A[y][x - 1] == 0)
-    flag = flag and (A[y][x] == 0)
     flag = flag and (A[y][x + 1] == 0)
     flag = flag and (A[y + 1][x] == 0)
     return flag
