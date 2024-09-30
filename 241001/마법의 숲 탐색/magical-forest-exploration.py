@@ -32,7 +32,7 @@ def can_move(y, x):
     # 남쪽으로 내려올 때, 좌우 회전을 통해 내려올 때의 위치가 0일 때
     if (forest_map[y][x + 1] == 0 and forest_map[y][x - 1] == 0 and forest_map[y + 1][x] == 0 and 
         forest_map[y - 1][x - 1] == 0 and forest_map[y][x] == 0 and forest_map[y - 2][x] == 0 and
-        forest_map[y - 1][x + 1] == 0):
+        forest_map[y - 1][x + 1] == 0 and forest_map[y - 1][x] == 0):
             return True
 
     return False
